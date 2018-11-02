@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Burgers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <script id="page-template" type="text/x-handlebars-template">
+        <h1>Burgers!</h1>
+
+        <h2>Eat That Burger!</h2>
+
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burger-block devour=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+
+        <h2>Don't Eat That Burger!</h2>
+
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burger-block devour=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+
+        <h2>Add a Burger</h2>
+
+        <form class="create-form">
+            <div class="form-group">
+                <label for="ca">Burger Name:</label>
+                <input type="text" id="ca" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="sleepy">Devoured?</label><br>
+                <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+                <input type="radio" name="devoured" value="0"> Don't Devoured
+            </div>
+
+            <button type="submit">Add Burger</button>
+        </form>
+    </script>
+
+    <script id="burgers-block-partial" type="text/x-handlebars-template">
+        <li>
+            {{name}}
+
+            <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
+                {{#if devoured}}EAT TIME!{{else}}Stop Eating!{{/if}}
+            </button>
+
+            <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+        </li>
+    </script>
+</head>
+
+
+<body>
+    <div id="app"></div>
+</body>
+</html>
