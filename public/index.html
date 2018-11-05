@@ -40,8 +40,8 @@
 
             <div class="form-group">
                 <label for="devoured">Devoured?</label><br>
-                <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-                <input type="radio" name="devoured" value="0"> Don't Devoured
+                <input type="radio" name="devoured" value="1" checked> Don't Devoured!<br>
+                <input type="radio" name="devoured" value="0">  Devoured
             </div>
 
             <button type="submit">Add Burger</button>
@@ -52,8 +52,8 @@
         <li>
             {{name}}
 
-            <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
-                {{#if devour}}EAT TIME!{{else}}Stop Eating!{{/if}}
+            <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+                {{#if devour}}Stop Eating!{{else}}EAT TIME!!{{/if}}
             </button>
 
             <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>

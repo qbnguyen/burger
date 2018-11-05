@@ -32,7 +32,7 @@ $(function() {
       var newDevour = $(this).data("newdevour");
   
       var newDevourState = {
-        Devoured: newDevour
+        devoured: newDevour
       };
   
       // Send the PUT request.

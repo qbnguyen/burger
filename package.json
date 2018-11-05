@@ -19,6 +19,7 @@
   "homepage": "https://github.com/qbnguyen/burger#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "handlebars": "^4.0.12",
     "mysql": "^2.16.0"
   }
 }
