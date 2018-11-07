@@ -8,28 +8,35 @@
 		<script src="/assets/js/script.js"></script>
 
         <script id="page-template" type="text/x-handlebars-template">
-        <h1>Burgers!</h1>
-
-        <h2>Eat That Burger!</h2>
-
-        <ul>
-            {{#each burgers}}
-                {{#unless devoured}}
-                    {{> burger-block devour=true}}
-                {{/unless}}
-            {{/each}}
-        </ul>
-
-        <h2>Don't Eat That Burger!</h2>
-
-        <ul>
-            {{#each burgers}}
-                {{#if devoured}}
-                    {{> burger-block devour=false}}
-                {{/if}}
-            {{/each}}
-        </ul>
-
+        <h1 class="text-center">Burgers!</h1>
+       
+        <div class="text-center">
+            <img src="http://www.aioliburger.com/wp-content/uploads/2016/08/Aioli-Gourmet-Burgers-1.jpg" class="rounded" alt="...">
+          </div>
+          <div class="row justify-content-center">
+                <div class="col-4 font-weight-bold">
+                        Eat That Burger!
+                        <ul>
+                                {{#each burgers}}
+                                    {{#unless devoured}}
+                                        {{> burger-block devour=true}}
+                                    {{/unless}}
+                                {{/each}}
+                            </ul>
+                </div>
+                <div class="col-4 font-weight-bold">
+                        Don't Eat That Burger!
+                        <ul>
+                                {{#each burgers}}
+                                    {{#if devoured}}
+                                        {{> burger-block devour=false}}
+                                    {{/if}}
+                                {{/each}}
+                            </ul>
+                        
+                </div>
+              </div>
+              
         <h2>Add a Burger</h2>
 
         <form class="create-form">
@@ -43,8 +50,9 @@
                 <input type="radio" name="devoured" value="1" checked> Don't Devoured!<br>
                 <input type="radio" name="devoured" value="0">  Devoured
             </div>
-
-            <button type="submit">Add Burger</button>
+            
+            <button type="submit" class="btn btn-primary">Add Burger</button>
+          
         </form>
     </script>
 
@@ -59,10 +67,12 @@
             <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
         </li>
     </script>
+
 </head>
 
 
 <body>
     <div id="app"></div>
 </body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </html>
