@@ -3,13 +3,29 @@
 <html lang="en">
 	<head>
         <title>Burgers!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <meta name="google-signin-client_id" content="219205541710-i69iselndtusj0hh4ns8cc15duohihlb.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 		<script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-		<script src="/assets/js/script.js"></script>
+        <script src="/assets/js/script.js"></script>
+        
 
         <script id="page-template" type="text/x-handlebars-template">
+            <style>
+                .g-signin2{
+                    margin-left: 500px;
+                    margin-top: 200px;
+        
+                }
+            </style>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
         <h1 class="text-center">Burgers!</h1>
-       
+        
         <div class="text-center">
             <img src="http://www.aioliburger.com/wp-content/uploads/2016/08/Aioli-Gourmet-Burgers-1.jpg" class="rounded" alt="...">
           </div>
